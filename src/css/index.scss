@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:focus {
+    outline: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.iconActive {
+    background: #e2ab12;
+}
+
+.slider {
+    position: relative;
+    width: 1500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    width: 1200px;
+    height: 800px;
+}
+
+.right-arrow {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    right: 0px;
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 0px;
+    transform: rotate(180deg);
+    font-size: 3rem;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.slide {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.description {
+    position: absolute;
+    color: white;
+    max-width: 500px;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.65);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur( 8.0px );
+    border-radius: 5px;
+    top: 20%;
+    transform: translateX(100px);
+    line-height: 2.5rem;
+
+    .heading {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0 2rem 0 .5rem;
+            font-weight: bold;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .view {
+        padding: .5rem 1rem;
+        cursor: pointer;
+        font-size: .9rem;
+        border: none;
+        margin-right: 1.5rem;
+    }
+
+    .buy {
+        transition: .5s ease;
+        background: #ffbb00;
+        cursor: pointer;
+        border: none;
+        font-size: .9rem;
+        margin-top: 2rem;
+        padding: .5rem 1rem;
+
+        &:hover {
+            transition: .5s ease;
+            background: #e2ab12;
+        }
+    }
+}
+
+//mob view for slider
+
+.mob-slider {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mob-image {
+    width: 100%;
+    height: 210px;
+}
+
+.mob-right-arrow {
+    position: absolute;
+    width: 1.5rem;
+    top: 50%;
+    right: 10px;
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mob-left-arrow {
+    position: absolute;
+    width: 1.5rem;
+    top: 50%;
+    left: 10px;
+    transform: rotate(180deg);
+    color: #000;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+
+.mob-slide {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.mob-slide.mob-active {
+    opacity: 1;
+    transition: 1s ease;
+}
+
+.mob-description {
+    position: absolute;
+    color: white;
+    width: 80%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5rem;
+    background: rgba(0, 0, 0, 0.65);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur( 8.0px );
+    border-radius: 5px;
+    line-height: 1.8rem;
+
+    .heading {
+        display: flex;
+        align-items: center;
+
+        p {
+            margin: 0 2rem 0 .5rem;
+            font-weight: bold;
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+
+        img {
+            position: absolute;
+            right: 1rem;
+        }
+    }
+
+    .view {
+        padding: .5rem 1rem;
+        cursor: pointer;
+        font-size: .9rem;
+        border: none;
+    }
+
+    .buy {
+        transition: .5s ease;
+        background: #ffbb00;
+        cursor: pointer;
+        border: none;
+        font-size: .9rem;
+        padding: .5rem 1rem;
+        margin-right: 1rem;
+
+        &:hover {
+            transition: .5s ease;
+            background: #e2ab12;
+        }
+    }
+}
+
+//screen width < 1800px || For small monitors
+@media screen and (max-width: 1800px) {
+    .slider {
+        width: 1200px;
+    }
+    
+    .image {
+        width: 900px;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .slider {
+        width: 1024px;
+    }
+    
+    .image {
+        width: 900px;
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .mob-image {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .mob-image {
+        height: 250px;
+    }
+}

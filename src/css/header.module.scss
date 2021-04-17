@@ -1,0 +1,162 @@
+//Desktop View
+.upperHeader {
+  display: flex;
+  padding: 0 10rem;
+  justify-content: space-between;
+  margin: .5rem auto;
+  font-size: 14px;
+}
+
+.info {
+  display: flex;
+
+  p {
+    &:first-child {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.socialMedia {
+  img {
+    margin-left: 2rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//main header
+.mainHeaderWrapper {
+  background: rgb(235, 235, 235);
+  .mainHeader {
+    display: flex;
+    padding: 1rem 10rem;
+    justify-content: space-between;
+    align-items: center;
+  
+    input[type=search] {
+      border: none;
+      border-radius: 0;
+      padding: 1rem 2rem;
+    }
+  
+    input[type=button] {
+      border: none;
+      padding: 1rem 1.2rem;
+      background: #ffbb00;
+      cursor: pointer;
+  
+      &:hover {
+        transition: .5s ease;
+        background: #e2ab12;
+      }
+    }
+  }
+}
+
+nav {
+  background: rgb(37, 37, 37);
+  color: white;
+  padding: 0rem 10rem;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      padding: 1rem 4rem;
+      border-left: 1px solid white;
+      
+      &:hover {
+        cursor: pointer;
+        transition: .5s ease;
+        background: #e2ab12;
+      }
+
+      &:last-child {
+        border-right: 1px solid white;
+      }
+
+    }
+  }
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+//Mob view
+.mobMainHeader {
+  background: rgb(235, 235, 235);
+  padding: .5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  ul {
+    z-index: 2;
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    padding-top: 2.5rem;
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    color: white;
+    right: 0;
+    background: rgba(32, 32, 32, 0.95);
+
+    li {
+      padding: 1.5rem 0;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid white;
+    }
+
+    input[type=button] {
+      position: absolute;
+      margin-top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      border: none;
+      border-radius: 2px;
+      background: rgb(238, 238, 238);
+      padding: .5rem 1rem;
+    }
+  }
+}
+
+.cart {
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  background: #e2ab12;
+  padding: 1.5rem;
+}
+
+//screen width > 2000px || For big monitors
+@media screen and (min-width: 2000px) {
+  .upperHeader {
+    padding: 0;
+    width: 1800px;
+  }
+  .mainHeaderWrapper {
+    .mainHeader {
+      width: 1800px;
+      margin: auto;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
