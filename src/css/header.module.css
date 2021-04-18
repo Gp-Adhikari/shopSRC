@@ -6,6 +6,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: .5rem auto;
   font-size: 14px;
 }
@@ -47,6 +50,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.mainHeaderWrapper .mainHeader button {
+  padding: 1rem 1.2rem;
+  margin-left: .5rem;
+  background: #252525;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .mainHeaderWrapper .mainHeader input[type=search] {

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import styles from '../../css/header.module.css';
-import {NavLink as Navlink} from 'react-router-dom';
+import {NavLink as Navlink, Link} from 'react-router-dom';
 
 import { NavToggleContext } from '../../Contexts/NavToggleContext';
 
@@ -48,7 +48,10 @@ function Header() {
                     <input type="search" placeholder="Search..." />
                     <input type="button" value="Search" />
                 </form>
-                <img src={cart} alt="cart" />
+                <div>
+                    <img src={cart} alt="cart" /> ,
+                    <Link to="/sign-up" className={styles.button}><button>Sign Up</button></Link>
+                </div>
                 </div>
             </div>
     
