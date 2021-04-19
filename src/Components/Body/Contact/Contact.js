@@ -9,6 +9,7 @@ function Contact() {
             <h2>Contact Us</h2>
             <form className={styles.contact}>
                 <table>
+                    <tbody>
                     <tr>
                         <td><span>E-mail:</span></td>
                         <td><input type="email" name="email" /></td>
@@ -23,6 +24,7 @@ function Contact() {
                         <td></td>
                         <td><input type="submit" value="Send" /></td>
                     </tr>
+                    </tbody>
                 </table>
             </form>
         </div>

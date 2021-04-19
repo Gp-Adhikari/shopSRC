@@ -1,0 +1,69 @@
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    span {
+        color: #0E70E7;
+        cursor: pointer;
+        font-weight: bold;
+        padding: 0rem 0.5rem 0.1rem 0.5rem;
+        border-bottom: 1px solid transparent;
+        transition: all .5s ease;
+        
+        &:hover {
+            border-bottom: 1px solid #0E70E7;
+        }
+    }
+}
+
+table.signUp {
+    background: #f0f2f5;
+    margin: 2rem auto;
+    width: 30%;
+    padding: 0 1rem;
+
+    input[type=text], input[type=email], input[type=password] {
+        width: 100%;
+        font-size: 14px;
+        padding: .5rem 1rem;
+        border: 1px solid #252525;
+        transition: all .5s ease;
+
+        &:focus {
+            border: 1px solid #ffbb00;
+        }
+    }
+
+    input[type=button] {
+        transition: .5s ease;
+        cursor: pointer;
+        border: none;
+        background: #ffbb00;
+        padding: .8rem 2rem;
+        
+        &:hover {
+            transition: .5s ease;
+            background: #e2ab12;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    table.signUp {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    table.signUp {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    table.signUp {
+        width: 90%;
+        padding: 20px;
+    }
+}

@@ -1,4 +1,8 @@
-.signIn span {
+a {
+  text-decoration: none;
+}
+
+.wrapper span {
   color: #0E70E7;
   cursor: pointer;
   font-weight: bold;
@@ -8,18 +12,18 @@
   transition: all .5s ease;
 }
 
-.signIn span:hover {
+.wrapper span:hover {
   border-bottom: 1px solid #0E70E7;
 }
 
-table.signIn {
+table.signUp {
   background: #f0f2f5;
   margin: 2rem auto;
   width: 30%;
   padding: 0 1rem;
 }
 
-table.signIn input[type=text], table.signIn input[type=email], table.signIn input[type=password] {
+table.signUp input[type=text], table.signUp input[type=email], table.signUp input[type=password] {
   width: 100%;
   font-size: 14px;
   padding: .5rem 1rem;
@@ -28,11 +32,11 @@ table.signIn input[type=text], table.signIn input[type=email], table.signIn inpu
   transition: all .5s ease;
 }
 
-table.signIn input[type=text]:focus, table.signIn input[type=email]:focus, table.signIn input[type=password]:focus {
+table.signUp input[type=text]:focus, table.signUp input[type=email]:focus, table.signUp input[type=password]:focus {
   border: 1px solid #ffbb00;
 }
 
-table.signIn input[type=button] {
+table.signUp input[type=button] {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   cursor: pointer;
@@ -41,26 +45,26 @@ table.signIn input[type=button] {
   padding: .8rem 2rem;
 }
 
-table.signIn input[type=button]:hover {
+table.signUp input[type=button]:hover {
   -webkit-transition: .5s ease;
   transition: .5s ease;
   background: #e2ab12;
 }
 
 @media screen and (max-width: 1600px) {
-  table.signIn {
+  table.signUp {
     width: 50%;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  table.signIn {
+  table.signUp {
     width: 60%;
   }
 }
 
-@media screen and (max-width: 1600px) {
-  table.signIn {
+@media screen and (max-width: 795px) {
+  table.signUp {
     width: 90%;
     padding: 20px;
   }

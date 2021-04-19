@@ -1,0 +1,145 @@
+.shopWrapper {
+  margin: 3rem 0;
+}
+
+.categories {
+  line-height: 2.5rem;
+}
+
+.categories p {
+  font-weight: bold;
+}
+
+.cate {
+  display: initial;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+.container {
+  margin-left: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2.5rem;
+}
+
+.item {
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+}
+
+.item .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.bikeImg {
+  width: 300px;
+  height: 200px;
+}
+
+.description {
+  line-height: 2rem;
+}
+
+.description .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .item .cover {
+    width: 250px;
+    height: 150px;
+  }
+  .bikeImg {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .item .cover {
+    width: 220px;
+    height: 120px;
+  }
+  .container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+  }
+  .bikeImg {
+    width: 220px;
+    height: 120px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .center {
+    display: block;
+    text-align: center;
+  }
+  .container {
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 220px 220px;
+        grid-template-columns: 220px 220px;
+    grid-gap: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .cate p {
+    border: 2px solid #252525;
+    padding: 0.2rem 1rem;
+    border-radius: 10rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    -ms-grid-columns: 220px;
+        grid-template-columns: 220px;
+  }
+}

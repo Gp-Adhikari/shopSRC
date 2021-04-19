@@ -75,7 +75,9 @@ function Header() {
                         <ul id="nav">
                             <Navlink to="/" exact activeClassName="iconActive" className={styles.link} onClick={() => changeNavStatus()}><li>Home</li></Navlink>
                             <Navlink to="/shop" activeClassName="iconActive" className={styles.link} onClick={() => changeNavStatus()}><li>Shop</li></Navlink>
-                            <Navlink to="/contact" activeClassName="iconActive" className={styles.link} onClick={() => changeNavStatus()}><li>Contact</li></Navlink>
+                            <Navlink to="/contact" activeClassName="iconActive" className={styles.link} onClick={() => changeNavStatus()}><li className={styles.removeBorder}>Contact</li></Navlink>
+                            <Navlink to="/sign-up" activeClassName="iconActive" className={styles.linkComponent} onClick={() => changeNavStatus()}><li className={styles.signUp}>Sign Up</li></Navlink>
+                            <Navlink to="/log-in" activeClassName="iconActive" className={styles.linkComponent} onClick={() => changeNavStatus()}><li className={styles.logIn}>Login</li></Navlink>
                             <input type="button" value="Close" onClick={() => changeNavStatus()} />
                         </ul>
                 </div>

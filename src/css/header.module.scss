@@ -48,9 +48,10 @@
       border: none;
       color: white;
       cursor: pointer;
-
+      transition: all .5s ease;
+      
       &:hover {
-
+        border-radius: 1rem ;
       }
     }
   
@@ -105,11 +106,18 @@ nav {
 
 .link {
   color: white;
-  text-decoration: none;
+}
+
+.linkComponent {
+  color: black;
+  text-transform: uppercase;
 }
 
 //Mob view
 .mobMainHeader {
+  position: sticky;
+  z-index: 7;
+  top: 0;
   background: rgb(235, 235, 235);
   padding: .5rem 1rem;
   display: flex;
@@ -117,10 +125,10 @@ nav {
   justify-content: space-between;
 
   ul {
-    z-index: 2;
+    z-index: 9;
     display: none;
     list-style-type: none;
-    position: absolute;
+    position: fixed;
     padding-top: 2.5rem;
     width: 60%;
     height: 100vh;
@@ -131,9 +139,26 @@ nav {
 
     li {
       padding: 1.5rem 0;
-      width: 100%;
+      width: 80%;
+      margin: auto;
       text-align: center;
       border-bottom: 1px solid white;
+
+      &.removeBorder {
+        border-bottom: none;
+      }
+
+      &.logIn {
+        width: 100%;
+        border-bottom: none;
+        background: #e2ab12;
+      }
+      
+      &.signUp {
+        width: 100%;
+        border-bottom: 2px solid black;
+        background: #e2ab12;
+      }
     }
 
     input[type=button] {
@@ -155,8 +180,9 @@ nav {
   bottom: 20px;
   right: 20px;
   border-radius: 50%;
-  background: #e2ab12;
+  background: #ffbb00;
   padding: 1.5rem;
+  box-shadow: 0px 0px 20px -9px rgba(0,0,0,0.75);
 }
 
 //screen width > 2000px || For big monitors

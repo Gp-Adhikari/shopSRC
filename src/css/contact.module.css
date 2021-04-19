@@ -92,7 +92,7 @@ textarea:focus {
     height: 450px;
   }
   tr, td {
-    padding: 5px 0;
+    padding: 10px 0;
   }
   textarea {
     width: 100%;

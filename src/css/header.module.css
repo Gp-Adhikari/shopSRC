@@ -59,6 +59,12 @@
   border: none;
   color: white;
   cursor: pointer;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.mainHeaderWrapper .mainHeader button:hover {
+  border-radius: 1rem;
 }
 
 .mainHeaderWrapper .mainHeader input[type=search] {
@@ -117,10 +123,18 @@ nav ul li:last-child {
 
 .link {
   color: white;
-  text-decoration: none;
+}
+
+.linkComponent {
+  color: black;
+  text-transform: uppercase;
 }
 
 .mobMainHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 7;
+  top: 0;
   background: #ebebeb;
   padding: .5rem 1rem;
   display: -webkit-box;
@@ -135,10 +149,10 @@ nav ul li:last-child {
 }
 
 .mobMainHeader ul {
-  z-index: 2;
+  z-index: 9;
   display: none;
   list-style-type: none;
-  position: absolute;
+  position: fixed;
   padding-top: 2.5rem;
   width: 60%;
   height: 100vh;
@@ -150,9 +164,26 @@ nav ul li:last-child {
 
 .mobMainHeader ul li {
   padding: 1.5rem 0;
-  width: 100%;
+  width: 80%;
+  margin: auto;
   text-align: center;
   border-bottom: 1px solid white;
+}
+
+.mobMainHeader ul li.removeBorder {
+  border-bottom: none;
+}
+
+.mobMainHeader ul li.logIn {
+  width: 100%;
+  border-bottom: none;
+  background: #e2ab12;
+}
+
+.mobMainHeader ul li.signUp {
+  width: 100%;
+  border-bottom: 2px solid black;
+  background: #e2ab12;
 }
 
 .mobMainHeader ul input[type=button] {
@@ -173,8 +204,10 @@ nav ul li:last-child {
   bottom: 20px;
   right: 20px;
   border-radius: 50%;
-  background: #e2ab12;
+  background: #ffbb00;
   padding: 1.5rem;
+  -webkit-box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 20px -9px rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (min-width: 2000px) {
